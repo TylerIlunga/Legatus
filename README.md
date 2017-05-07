@@ -1,3 +1,2 @@
-# Wave
-#Reserve albums legally before they come out
 # Legatus
+Efficient proxy delievery service
