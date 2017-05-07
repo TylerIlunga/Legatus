@@ -1,10 +1,12 @@
-.header {
-	margin-top: 10px;
-	margin-bottom: 10px;
+#text {
+	margin-top: 20px;
+	color: white;
+	font-size: 20px;
 }
 
 .navbar {
-	background-color: #ffffff;
+	background-color: #FA9247;
+	height: 100px;
 }
 
 body {
