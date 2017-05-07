@@ -1,3 +1,8 @@
+.header {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .navbar {
 	background-color: #ffffff;
 }
@@ -9,6 +14,8 @@ body {
 .thumbnail {
 	margin-top: 100px;
 	margin-bottom: 100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .thumbnail .description {
@@ -25,7 +32,9 @@ body {
 	font-size: 16px;
 }
 
-footer {
+footer p {
 	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
