@@ -12,7 +12,6 @@ var express = require('express'),
 	passport = require('passport'),
 	validator = require('express-validator');
 
-	as
 
 var routes = require('./routes/index');	
 var userRoutes = require('./routes/user');
