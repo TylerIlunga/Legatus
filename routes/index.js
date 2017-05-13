@@ -14,6 +14,10 @@ router.get('/', function(req, res, next){
 	});
 });
 
+router.get('/order', function(req, res, next){
+	res.render('checkout/order')
+});
+
 router.get('/buy5', function(req, res, next){
 	res.render('checkout/buy5');
 });
