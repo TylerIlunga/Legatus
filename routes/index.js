@@ -1,47 +1,46 @@
 var express = require('express'),
 	router = express.Router();
 
-var Product = require('../models/product');
+var userData = require('../models/userData.js');
 
 router.get('/', function(req, res, next){
-	Product.find(function(err, docs){
-		var productChunks = [];
-		var chunkSize = 3;
-		for (var i = 0; i < docs.length; i += chunkSize) {
-			productChunks.push(docs.slice(i, i + chunkSize));
-		}
-		res.render('shop/index', {title: 'WAVE', products: productChunks});
-	});
+		res.render('shop/index', {title: 'Legatus'});
 });
 
 router.get('/order', function(req, res, next){
 	res.render('checkout/order')
 });
 
-router.get('/buy5', function(req, res, next){
-	res.render('checkout/buy5');
-});
+router.get('/:page', function(req, res, next) {
+	var page = req.params.page;
+	res.send(
 
-router.get('/buy10', function(req, res, next){
-	res.render('checkout/buy10');
-});
+		"<p><strong>Page Not Found, Sorry :(</strong><p><br><a href=\'/ \'>Come Back!</a>"
 
-router.get('/buy20', function(req, res, next){
-	res.render('checkout/buy20');
-});
+		);
+})
 
-router.get('/buy25', function(req, res, next){
-	res.render('checkout/buy25');
-});
+router.post('/api/order', function(req, res, next){
+	var body = req.body;
 
-router.get('/buy50', function(req, res, next){
-	res.render('checkout/buy50');
-});
+	//submit to mongo
 
-router.get('/buy100', function(req, res, next){
-	res.render('checkout/buy100');
-});
+	var data = new userData({
+		name: req.body.name,
+		email: req.body.email
+	});
 
+	//save
+
+	data.save(function(err){
+		if (err) {
+			throw err;
+		} else {
+			console.log('user info saved sucessfully');
+			res.render('checkout/buy');
+		}	
+	});
+});
 
 
 module.exports = router;

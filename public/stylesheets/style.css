@@ -87,3 +87,68 @@ footer p {
 	text-align: center;
 }
 
+.Buy {
+	text-align: center;
+	border-radius: 0;
+	border: thin solid #FA9247;
+	background-color: #FA9247;
+	color: white;
+	margin-bottom: 20px; 
+}
+
+.below {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/*CHECK*/
+.btn-center form table {
+	margin: 0;
+	float: center;
+}
+.success {
+	text-align: center;
+	border-radius: 0;
+	border: thin solid #00ff00;
+	background-color: #00ff00 ;
+	color: white;
+	margin-bottom: 20px; 
+}
+
+.cancel {
+	text-align: center;
+	border-radius: 0;
+	border: thin solid #FF0000;
+	background-color: #FF0000;
+	color: white;
+	margin-bottom: 20px; 
+}
+
+/*CHECK*/
+.cancel-behavior {
+	height: 100%;
+	width: 100%;
+	margin-bottom: 700px;
+}
+
+/*CHECK*/
+#cancel-behavior-no-link, #cancel-behavior-yes-link {
+	text-decoration: none;
+	background-color: none;
+	color: white;
+	border: thin solid white;
+	border-radius: 0;
+}
+
+/*CHECK*/
+#cancel-behavior-no-link:hover, #cancel-behavior-yes-link:hover {
+	text-decoration: none;
+	background-color: white;
+	color: #FA9247;
+	border: thin solid white;
+	border-radius: 0;
+	margin-top: 8px;
+	margin-right: 5px;
+}
+
+

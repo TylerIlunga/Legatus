@@ -1,3 +1,22 @@
-<div>
-	<h1>Order</h1>
-</div>
+<body>
+	<div class="container">
+			<h1 class="Buy">Order</h1>
+		<br>
+		<div id="form">
+			<form action="/api/order" method="post">
+				<div class="form-group">
+					<label>Full Name</label>
+					<input type="text" class="form-control" required name="name" placeholder="Name" id="name">
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input type="text" class="form-control" required name="email" placeholder="Email" id="email">
+				</div>
+				<br>
+				<button type="submit" class="btn btn-success" style="width: 100%" id="submit" data-toggle="modal" data-target="#userTokenScreen">
+					Submit 
+				</button>
+			</form>
+		</div>
+	</div>
+</body>

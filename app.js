@@ -21,13 +21,14 @@ var app = express();
 // var users = require('./routes/users');
 
 var config = require('./mongo/config');
+var userData = require('./models/userData.js');
 mongoose.connect(config.database, function(){
 	console.log("Connected to db!");
 });
-var seeder = require('./seed/ProductSeeder');
-require('./config/passport');
+// var seeder = require('./seed/ProductSeeder');
+// require('./config/passport');
 
-var csrfProtection = csrf({ cookie: true });
+// var csrfProtection = csrf({ cookie: true });
 
 //view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
