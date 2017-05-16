@@ -11,6 +11,10 @@ router.get('/order', function(req, res, next){
 	res.render('checkout/order')
 });
 
+router.get('/buy', function(req, res, next){
+	res.render('checkout/buy')
+});
+
 router.get('/:page', function(req, res, next) {
 	var page = req.params.page;
 	res.send(
