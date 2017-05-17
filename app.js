@@ -1,6 +1,6 @@
 var express = require('express'),
 	csrf = require('csurf'),
-	port = process.env.PORT || 5000,
+	port = process.env.PORT || 3000,
 	favicon = require('serve-favicon'),
 	bodyParser = require('body-parser'),
 	cookieParser = require('cookie-parser'),
@@ -83,6 +83,8 @@ if (app.get('env') === 'development') {
 // 	});
 // });
 
-app.listen(port, () => console.log('listening on port ' + port));
+app.listen(port, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 module.exports = app;
