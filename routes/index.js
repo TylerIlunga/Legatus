@@ -15,6 +15,14 @@ router.get('/buy', function(req, res, next){
 	res.render('checkout/buy')
 });
 
+router.get('/success', function(req, res, next){
+	res.render('outcomes/success')
+});
+
+router.get('/canceled', function(req, res, next){
+	res.render('outcomes/canceled')
+});
+
 router.get('/:page', function(req, res, next) {
 	var page = req.params.page;
 	res.send(
