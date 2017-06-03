@@ -8,11 +8,11 @@ router.get('/', function(req, res, next){
 });
 
 router.get('/order', function(req, res, next){
-	res.render('checkout/order')
+	res.render('checkout/order', {title: 'Order'})
 });
 
 router.get('/buy', function(req, res, next){
-	res.render('checkout/buy')
+	res.render('checkout/buy', {title: 'Buy'})
 });
 
 router.get('/success', function(req, res, next){
