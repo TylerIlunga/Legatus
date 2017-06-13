@@ -104,6 +104,11 @@ footer p {
 	height: 100%
 }
 
+.button-wrapper table {
+	color: black;
+	width: 50%;
+	margin: 0 auto;
+}
 
 
 .Buy {
